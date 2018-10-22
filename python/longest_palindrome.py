@@ -4,7 +4,6 @@
 str = 'abbaca'
 
 # First we check if it's a palindrome
-
 def check_pal(str):
 	if len(str) <= 1:
 		return True 
