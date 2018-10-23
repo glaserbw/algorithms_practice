@@ -57,25 +57,18 @@ class LinkedList:
                 
                 
         
-newll = LinkedList()
+newLl = LinkedList()
 
-newll.addend(2)
-newll.addend(3)
-newll.print_ll()
+newLl.addEnd(2)
+newLl.addEnd(3)
+newLl.addEnd(4)
+newLl.addEnd(5)
+newLl.addEnd(6)
+newLl.addEnd(7)
+newLl.addEnd(8)
+newLl.addEnd(9)
 
-def insertAfter(self, prev_node, new_data): 
-  
-        # 1. check if the given prev_node exists 
-        if prev_node is None: 
-            print "The given previous node must inLinkedList."
-            return
-  
-        #  2. create new node & 
-        #      Put in the data 
-        new_node = Node(new_data) 
-  
-        # 4. Make next of new Node as next of prev_node 
-        new_node.next = prev_node.next
-  
-        # 5. make next of prev_node as new_node 
-        prev_node.next = new_node
+newLl.insertIdx(10,3)
+
+newLl.printLl()
+
