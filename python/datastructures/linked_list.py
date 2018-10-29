@@ -54,11 +54,47 @@ class LinkedList:
                     new_node=temp2
         self.size+=1
 
+    def deleteFirst(self):
+        temp = self.head
+        self.head = self.head.next
+        temp.next = None
+        self.size-=1
+
+    def deleteLast(self):
+        temp = self.head
+        while temp.next != None:
+            prev=temp
+            temp=temp.next 
+        prev.next = None
+        self.size -= 1
+
+    def deleteIndex(self, idx):
+        temp = self.head
+        pos = 0 
+        if idx == 0:
+            self.deleteFirst()
+        elif idx == self.size-1: 
+            self.deleteLast()
+        else: 
+            while temp.next != None:
+                pos += 1
+                prev=temp
+                temp=temp.next 
+                if pos == idx:
+                    prev.next = temp.next
+                    # temp.next = None
+                self.size-=1
+
+
+        
+
                 
-                
+
+
         
 newLl = LinkedList()
 
+newLl.addEnd(1)
 newLl.addEnd(2)
 newLl.addEnd(3)
 newLl.addEnd(4)
@@ -68,7 +104,9 @@ newLl.addEnd(7)
 newLl.addEnd(8)
 newLl.addEnd(9)
 
-newLl.insertIdx(10,3)
+# newLl.deleteFirst()
+# newLl.deleteLast()
+newLl.deleteIndex(3)
 
 newLl.printLl()
 
