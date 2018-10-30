@@ -6,7 +6,8 @@ def find_pivot(arr):
         # print(arrLeft)
         arrRight = sum(arr[i:len(arr)])
         if arrRight == arrLeft:
-            return arr[i] 
+            return i
+            
     # return -1 
 
 
