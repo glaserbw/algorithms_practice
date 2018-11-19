@@ -22,3 +22,5 @@ a4 = [50, 90, 80]
 
 diff(a1,a2)
 diff(a3,a4)
+
+# Calculating answer 
