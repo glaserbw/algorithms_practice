@@ -27,5 +27,6 @@ def longest_palindrome(str):
 			count += 1
 	return result
 
+# updated
 print(longest_palindrome(str))
 
